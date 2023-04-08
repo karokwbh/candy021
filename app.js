@@ -3,7 +3,23 @@
 // 題目：實作 Stack 資料結構
 
 class Stack {
-  // 實作寫在這裡
+  constructor () {
+    this.arr = [];
+    this.size = 0;
+  }
+
+  push(element) {
+    if (element != undefined) {
+      this.arr.push(element);
+      this.size++;
+    }
+  }
+  pop() {
+    if (this.arr.length > 0) {
+      this.size--;
+      return this.arr.pop();
+    }
+  }
 }
 
 const stack = new Stack()
